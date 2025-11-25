@@ -8,7 +8,7 @@ const Hero = () => {
   const socialLinks = [
     {
       name: 'Resume',
-      url: '/resume.pdf',
+      url: '/Kalyani_Tewari_Resume.pdf',
       download: true,
       icon: (
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

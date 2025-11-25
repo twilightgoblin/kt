@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop Navigation */}
-      <div className="fixed top-8 left-0 right-0 z-50 flex justify-center hidden md:flex">
+      <div className="fixed top-8 left-0 right-0 z-[100] flex justify-center hidden md:flex">
         <div className="overflow-hidden rounded-lg">
           <GooeyNav
             items={items}
@@ -57,7 +57,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Hamburger Menu */}
-      <div className="fixed top-6 right-6 z-50 md:hidden">
+      <div className="fixed top-6 right-6 z-[100] md:hidden">
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="hamburger-btn"

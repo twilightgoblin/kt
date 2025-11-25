@@ -274,13 +274,13 @@
   }
 
   .hero-text > div:first-child {
-    height: 80px;
-    min-height: 80px;
+    height: 120px;
+    min-height: 120px;
   }
 
   .hero-text > div:last-child {
-    height: 140px;
-    min-height: 140px;
+    height: 180px;
+    min-height: 180px;
   }
 
   .social-links {

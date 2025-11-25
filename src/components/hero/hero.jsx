@@ -86,7 +86,7 @@ const Hero = () => {
             backgroundColor="transparent"
             wireframes={false}
             gravity={0.56}
-            fontSize="3.5rem"
+            fontSize="clamp(1.5rem, 5vw, 3.5rem)"
             mouseConstraintStiffness={0.9}
           />
           <FallingText
@@ -97,7 +97,7 @@ const Hero = () => {
             backgroundColor="transparent"
             wireframes={false}
             gravity={0.56}
-            fontSize="1.25rem"
+            fontSize="clamp(0.875rem, 2.5vw, 1.25rem)"
             mouseConstraintStiffness={0.9}
           />
         </div>

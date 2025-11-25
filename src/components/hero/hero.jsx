@@ -50,7 +50,7 @@ const Hero = () => {
   ];
 
   return (
-    <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
+    <div id="home" style={{ width: '100%', height: '100vh', position: 'relative' }}>
       <LiquidEther
         colors={['#5227FF', '#FF9FFC', '#B19EEF']}
         mouseForce={20}
@@ -69,50 +69,15 @@ const Hero = () => {
         autoRampDuration={0.6}
       />
 
-      <div style={{ 
-        position: 'absolute', 
-        top: '50%', 
-        left: '50%', 
-        transform: 'translate(-50%, -50%)',
-        width: '90%',
-        maxWidth: '1000px',
-        zIndex: 10,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: '2.5rem'
-      }}>
-        <div style={{
-          position: 'relative',
-          width: '320px',
-          height: '320px',
-          borderRadius: '50%',
-          padding: '6px',
-          background: 'linear-gradient(0deg, #5227FF, #FF9FFC, #B19EEF, #5227FF)',
-          animation: 'spinBorder 4s linear infinite',
-          boxShadow: '0 15px 50px rgba(82, 39, 255, 0.4)'
-        }}>
+      <div className="hero-content">
+        <div className="profile-image">
           <img 
             src="/profile.jpg" 
             alt="Kalyani Tewari"
-            style={{
-              width: '100%',
-              height: '100%',
-              borderRadius: '50%',
-              objectFit: 'cover',
-              border: '5px solid #000'
-            }}
           />
         </div>
         
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '0rem',
-          textAlign: 'center',
-          width: '100%'
-        }}>
+        <div className="hero-text">
           <FallingText
             text={`Hello, I'm Kalyani Tewari.`}
             highlightWords={["Kalyani", "Tewari"]}
@@ -137,13 +102,7 @@ const Hero = () => {
           />
         </div>
 
-        <div style={{
-          display: 'flex',
-          gap: '2rem',
-          marginTop: '1rem',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}>
+        <div className="social-links">
           {socialLinks.map((link) => (
             <a
               key={link.name}
@@ -153,14 +112,10 @@ const Hero = () => {
               download={link.download ? 'Kalyani_Tewari_Resume.pdf' : undefined}
               onMouseEnter={() => setHoveredIcon(link.name)}
               onMouseLeave={() => setHoveredIcon(null)}
+              className="social-icon"
               style={{
                 color: hoveredIcon === link.name ? '#FF9FFC' : '#ffffff',
-                transition: 'all 0.3s ease',
-                transform: hoveredIcon === link.name ? 'scale(1.2)' : 'scale(1)',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
+                transform: hoveredIcon === link.name ? 'scale(1.2)' : 'scale(1)'
               }}
               aria-label={link.name}
             >

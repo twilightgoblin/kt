@@ -52,44 +52,8 @@ const socialLinks = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative min-h-screen flex flex-col items-center justify-center py-20 px-4 overflow-hidden">
-      {/* Animated Background Blobs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute top-1/4 -left-20 w-96 h-96 rounded-full blur-3xl"
-          style={{
-            background: 'radial-gradient(circle, rgba(255,159,252,0.15) 0%, transparent 70%)'
-          }}
-          animate={{
-            x: [0, 50, 0],
-            y: [0, 30, 0],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 -right-20 w-96 h-96 rounded-full blur-3xl"
-          style={{
-            background: 'radial-gradient(circle, rgba(82,39,255,0.15) 0%, transparent 70%)'
-          }}
-          animate={{
-            x: [0, -50, 0],
-            y: [0, -30, 0],
-            scale: [1, 1.15, 1],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      </div>
-
-      <div className="max-w-7xl mx-auto w-full relative z-10">
+    <section id="contact" className="min-h-screen flex flex-col items-center justify-center py-20 px-4">
+      <div className="max-w-7xl mx-auto w-full">
         <h2 
           className="text-3xl md:text-5xl font-bold text-center mb-16"
           style={{
@@ -129,28 +93,55 @@ export default function Contact() {
               <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <a 
+                  <motion.a 
                     href="#experience" 
-                    className="text-slate-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-400 transition-all duration-200"
+                    className="text-slate-400 inline-block relative group"
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
                   >
-                    Experience
-                  </a>
+                    <span className="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 transition-all duration-300">
+                      Experience
+                    </span>
+                    <motion.span 
+                      className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400"
+                      whileHover={{ width: "100%" }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </motion.a>
                 </li>
                 <li>
-                  <a 
+                  <motion.a 
                     href="#projects" 
-                    className="text-slate-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-400 transition-all duration-200"
+                    className="text-slate-400 inline-block relative group"
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
                   >
-                    Projects
-                  </a>
+                    <span className="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 transition-all duration-300">
+                      Projects
+                    </span>
+                    <motion.span 
+                      className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400"
+                      whileHover={{ width: "100%" }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </motion.a>
                 </li>
                 <li>
-                  <a 
+                  <motion.a 
                     href="#curricular" 
-                    className="text-slate-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-400 transition-all duration-200"
+                    className="text-slate-400 inline-block relative group"
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
                   >
-                    Activities
-                  </a>
+                    <span className="relative z-10 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 transition-all duration-300">
+                      Activities
+                    </span>
+                    <motion.span 
+                      className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400"
+                      whileHover={{ width: "100%" }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </motion.a>
                 </li>
               </ul>
             </motion.div>
@@ -164,43 +155,53 @@ export default function Contact() {
             >
               <h3 className="text-white font-semibold text-lg mb-4">Contact</h3>
               <div className="space-y-3">
-                <a 
+                <motion.a 
                   href="mailto:kalyanitewari53@gmail.com"
-                  className="flex items-start gap-2 group"
+                  className="flex items-start gap-2 group cursor-pointer"
+                  whileHover={{ x: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <svg 
+                  <motion.svg 
                     viewBox="0 0 24 24" 
                     fill="none" 
                     stroke="currentColor" 
                     strokeWidth="2" 
                     strokeLinecap="round" 
                     strokeLinejoin="round" 
-                    className="w-5 h-5 text-slate-400 mt-0.5 group-hover:text-purple-400 transition-colors duration-200"
+                    className="w-5 h-5 text-slate-400 mt-0.5 group-hover:text-purple-400 transition-colors"
+                    whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
+                    transition={{ duration: 0.5 }}
                   >
                     <rect width="20" height="16" x="2" y="4" rx="2"/>
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                  </svg>
-                  <span className="text-slate-400 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 transition-all duration-200 text-sm">
+                  </motion.svg>
+                  <span className="text-slate-400 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 transition-all duration-300 text-sm">
                     kalyanitewari53@gmail.com
                   </span>
-                </a>
-                <div className="flex items-start gap-2 group">
-                  <svg 
+                </motion.a>
+                <motion.div 
+                  className="flex items-start gap-2 group"
+                  whileHover={{ x: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <motion.svg 
                     viewBox="0 0 24 24" 
                     fill="none" 
                     stroke="currentColor" 
                     strokeWidth="2" 
                     strokeLinecap="round" 
                     strokeLinejoin="round" 
-                    className="w-5 h-5 text-slate-400 mt-0.5 group-hover:text-purple-400 transition-colors duration-200"
+                    className="w-5 h-5 text-slate-400 mt-0.5 group-hover:text-cyan-400 transition-colors"
+                    whileHover={{ scale: [1, 1.2, 1], y: [0, -3, 0] }}
+                    transition={{ duration: 0.5 }}
                   >
                     <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
                     <circle cx="12" cy="10" r="3"/>
-                  </svg>
-                  <span className="text-slate-400 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 transition-all duration-200 text-sm">
+                  </motion.svg>
+                  <span className="text-slate-400 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 transition-all duration-300 text-sm">
                     Pune, India
                   </span>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
 
@@ -216,16 +217,37 @@ export default function Contact() {
                 {socialLinks.map((social, index) => {
                   const Icon = social.icon;
                   return (
-                    <a
+                    <motion.a
                       key={index}
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-full bg-slate-800 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 flex items-center justify-center group transition-all duration-200"
+                      className="relative w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center group overflow-hidden"
                       title={social.name}
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
                     >
-                      <Icon className="text-slate-400 group-hover:text-white transition-colors duration-200" />
-                    </a>
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 opacity-0 group-hover:opacity-100"
+                        initial={{ rotate: 0 }}
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.6 }}
+                      />
+                      <motion.div
+                        className="absolute inset-0.5 bg-slate-800 rounded-full"
+                        initial={{ scale: 1 }}
+                        whileHover={{ scale: 0 }}
+                        transition={{ duration: 0.3 }}
+                      />
+                      <motion.div
+                        className="relative z-10"
+                        whileHover={{ scale: 1.2, rotate: -5 }}
+                        transition={{ type: "spring", stiffness: 400 }}
+                      >
+                        <Icon className="text-slate-400 group-hover:text-white transition-colors duration-300" />
+                      </motion.div>
+                    </motion.a>
                   );
                 })}
               </div>
@@ -238,7 +260,7 @@ export default function Contact() {
               © 2025 Kalyani Tewari. All rights reserved.
             </p>
             <p className="text-slate-500 text-sm">
-              Open to work
+              Built with React & Framer Motion
             </p>
           </div>
         </div>

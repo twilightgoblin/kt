@@ -14,6 +14,12 @@ const events = [
     subtitle: "DRDO",
     description: "Completed an image processing learning task on optical flow by studying and implementing the Horn-Schunck and Lucas-Kanade methods using MATLAB."
   },
+  {
+    year: "2022",
+    title: "Bachelor of Technology in Artificial Intelligence & Machine Learning ",
+    subtitle: "Symbiosis Institute of Technology, Pune ",
+    description: "CGPA: 8.75."
+  },
 ]
 
 export function ScrollTimelineExample() {

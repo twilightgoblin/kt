@@ -259,9 +259,7 @@ export default function Contact() {
             <p className="text-slate-500 text-sm">
               © 2025 Kalyani Tewari. All rights reserved.
             </p>
-            <p className="text-slate-500 text-sm">
-              Built with React & Framer Motion
-            </p>
+            
           </div>
         </div>
       </div>

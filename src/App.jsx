@@ -3,6 +3,7 @@ import Navbar from './components/navbar/navbar'
 import { ScrollTimelineExample } from './components/experience/experience'
 import Skills from './components/skills/skills'
 import { AnimatedPinDemo } from './components/projects/projects'
+import Curricular from './components/curricular/curricular'
 
 const App = () => {
   return (
@@ -18,6 +19,10 @@ const App = () => {
       <div className="section-separator"></div>
       <section id="projects">
         <AnimatedPinDemo />
+      </section>
+      <div className="section-separator"></div>
+      <section id="curricular">
+        <Curricular />
       </section>
     </div>
   )

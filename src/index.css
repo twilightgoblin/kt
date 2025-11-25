@@ -348,6 +348,13 @@
   padding-left: 2.5rem;
 }
 
+.mobile-nav-link.active {
+  background: rgba(82, 39, 255, 0.3);
+  color: #FF9FFC;
+  border-left: 4px solid #FF9FFC;
+  padding-left: 2.5rem;
+}
+
 .mobile-nav-link:first-child {
   border-top: 1px solid rgba(82, 39, 255, 0.3);
 }

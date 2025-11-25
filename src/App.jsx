@@ -4,6 +4,7 @@ import { ScrollTimelineExample } from './components/experience/experience'
 import Skills from './components/skills/skills'
 import { AnimatedPinDemo } from './components/projects/projects'
 import Curricular from './components/curricular/curricular'
+import Contact from './components/contact/contact'
 
 const App = () => {
   return (
@@ -24,6 +25,8 @@ const App = () => {
       <section id="curricular">
         <Curricular />
       </section>
+      <div className="section-separator"></div>
+      <Contact />
     </div>
   )
 }

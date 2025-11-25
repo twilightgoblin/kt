@@ -184,7 +184,17 @@ export const ScrollTimeline = ({
       )}
     >
       <div className="text-center py-16 px-4">
-        <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ color: '#5227FF' }}>{title}</h2>
+        <h2 
+          className="text-3xl md:text-5xl font-bold mb-4"
+          style={{
+            background: 'linear-gradient(to right, #FF9FFC, #5227FF)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}
+        >
+          {title}
+        </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           {subtitle}
         </p>

@@ -193,6 +193,16 @@
   width: 100%;
 }
 
+.hero-text > div:first-child {
+  height: 120px;
+  min-height: 120px;
+}
+
+.hero-text > div:last-child {
+  height: 180px;
+  min-height: 180px;
+}
+
 .social-links {
   display: flex;
   gap: 2rem;
@@ -226,6 +236,16 @@
     border: 4px solid #000;
   }
 
+  .hero-text > div:first-child {
+    height: 100px;
+    min-height: 100px;
+  }
+
+  .hero-text > div:last-child {
+    height: 160px;
+    min-height: 160px;
+  }
+
   .social-links {
     gap: 1.5rem;
   }
@@ -251,6 +271,16 @@
 
   .profile-image img {
     border: 3px solid #000;
+  }
+
+  .hero-text > div:first-child {
+    height: 80px;
+    min-height: 80px;
+  }
+
+  .hero-text > div:last-child {
+    height: 140px;
+    min-height: 140px;
   }
 
   .social-links {

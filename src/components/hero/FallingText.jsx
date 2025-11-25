@@ -116,7 +116,13 @@ const FallingText = ({
       elem.style.transform = 'none';
     });
 
-    const mouse = Mouse.create(containerRef.current);
+    const mouse = Mouse.create(render.canvas);
+    mouse.element.removeEventListener('mousewheel', mouse.mousewheel);
+    mouse.element.removeEventListener('DOMMouseScroll', mouse.mousewheel);
+    mouse.element.removeEventListener('touchstart', mouse.mousedown);
+    mouse.element.removeEventListener('touchmove', mouse.mousemove);
+    mouse.element.removeEventListener('touchend', mouse.mouseup);
+    
     const mouseConstraint = MouseConstraint.create(engine, {
       mouse,
       constraint: {
@@ -178,7 +184,7 @@ const FallingText = ({
           fontSize,
           lineHeight: 1.4
         }} />
-      <div className="absolute top-0 left-0 z-0" ref={canvasContainerRef} />
+      <div className="absolute top-0 left-0 z-0 pointer-events-none" ref={canvasContainerRef} />
     </div>
   );
 };
